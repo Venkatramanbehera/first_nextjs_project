@@ -13,7 +13,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         {/* <script src='./sc.js'></script> */}
       </Head>
-      <Script src='/sc.js' strategy='lazyOnload'></Script>
+      {/* <Script src='/sc.js' strategy='lazyOnload'></Script> */}
+      <nav className={styles.mainnav}>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Blogs</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
       <main className={styles.main}>
         <h1 className={styles.title}>
          Blog App In Next.js!
@@ -23,50 +31,22 @@ const Home: NextPage = () => {
           Get started by every{' '}
           <code className={styles.code}>programmer</code>
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="blogs">
+          <h2>Popular blogs</h2>
+          <div className="blog-items">
+            <h3>How to learn JS in 2021</h3>
+            <p>JS is used for desgining web logic</p>
+          </div>
+          <div className="blog-items">
+            <h3>How to learn JS in 2021</h3>
+            <p>JS is used for desgining web logic</p>
+          </div>
+          <div className="blog-items">
+            <h3>How to learn JS in 2021</h3>
+            <p>JS is used for desgining web logic</p>
+          </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
